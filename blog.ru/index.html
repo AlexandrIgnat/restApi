@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .row {
+            margin-top: 30px; 
+        } 
+        .row:first-child {
+            margin-right: 10px;
+        }
+
+        .card {
+            width: 18rem;
+            margin-top: 10px;
+        }
+
+        .post-list {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+    <div class="container">
+    <div class="row col-12" style="width: 400px;">
+        <h2>Добавление поста</h2>
+        <div>
+            <div class="form-group">
+                <label for="title">Заголовок</label>
+                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="body">Содержимое</label>
+                <textarea type="text" class="form-control" id="body" aria-describedby="emailHelp"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="addPost()">Отправить пост</button>
+        </div>
+    </div>
+    <div class="row col-12" style="width: 400px;">
+        <h2>Редактирование поста</h2>
+        <div>
+            <div class="form-group">
+                <label for="title-edit">Заголовок</label>
+                <input type="text" class="form-control" id="title-edit" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="body-edit">Содержимое</label>
+                <textarea type="text" class="form-control" id="body-edit" aria-describedby="emailHelp"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="updatePost()">Обновить пост</button>
+        </div>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html> 
